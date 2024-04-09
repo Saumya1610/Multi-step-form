@@ -63,7 +63,6 @@ export default function About() {
           />
         ))}
       </div>
-      <Button />
     </div>
   );
 }

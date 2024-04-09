@@ -19,9 +19,9 @@ export default function FirstPage() {
       ))
     }
      </div>
-     <div>
+     {/* <div>
       <Button />
-    </div>
+    </div> */}
     </div>
   );
 }
