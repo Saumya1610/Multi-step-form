@@ -7,6 +7,7 @@ import About from "../src/components/pages/About"
 import FirstPage from "./components/pages/FirstPage";
 import SecondPage from "./components/pages/SecondPage";
 import Button from "./components/atom/Button";
+import Level from "./components/pages/Level";
 
 function App() {
   const [step, setStep] = useState(1);
@@ -16,8 +17,12 @@ function App() {
   };
 
   const prevStep = () => {
-    setStep(step - 1);
+    if (step !== 0){
+      setStep(step - 1);
+    }
+   
   };
+  console.log(step)
 
   const ProgressBar = () => {
     return (
@@ -58,6 +63,14 @@ function App() {
   const Step4 = () => {
     return (
       <div>
+          <Level/>
+        <Button handleClick={submitForm}/>
+      </div>
+    );
+  };
+  const Step5 = () => {
+    return (
+      <div>
           <SecondPage/>
         <Button handleClick={submitForm}/>
       </div>
@@ -68,6 +81,7 @@ function App() {
     alert('Form submitted successfully!');
   };
 
+    
   return (
     <div className="h-screen p-4">
       <ProgressBar />
@@ -75,6 +89,7 @@ function App() {
       {step === 2 && <Step2 />}
       {step === 3 && <Step3 />}
       {step === 4 && <Step4 />}
+      {step === 5 && <Step5 />}
     </div>
   );
 };

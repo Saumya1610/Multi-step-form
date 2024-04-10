@@ -50,6 +50,7 @@ export default function About() {
             key={index}
             img={item.img}
             para={item.para}
+            direction="row"
           />
         ))}
       </div>

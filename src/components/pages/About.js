@@ -60,6 +60,7 @@ export default function About() {
             img={item.img}
             heading={item.heading}
             para={item.para}
+            direction = "row"
           />
         ))}
       </div>
